@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cl.duoc.esports.controller.JugadorController">
+    <center>
+        <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label fx:id="labelTitulo" layoutX="59.0" layoutY="10.0" text="Registro de jugadores">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+                <Label fx:id="labelNickname" layoutX="59.0" layoutY="48.0" text="Nickname" />
+                <Label fx:id="labelVideojuego" layoutX="286.0" layoutY="48.0" text="Videojuego" />
+                <Label fx:id="labelNivel" layoutX="59.0" layoutY="101.0" text="Nivel" />
+                <Label fx:id="labelTipoJugador" layoutX="286.0" layoutY="101.0" text="Tipo de jugador" />
+                <Label fx:id="labelCantVicPartJug" layoutX="59.0" layoutY="158.0" text="-" />
+                <Button fx:id="buttonRegistrar" layoutX="226.0" layoutY="175.0" mnemonicParsing="false" onAction="#registrarJugador" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #19831f;" text="+ Registrar" textFill="WHITE">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor></Button>
+                <Button fx:id="buttonEliminar" layoutX="309.0" layoutY="175.0" mnemonicParsing="false" onAction="#eliminarJugador" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #a81010;" text="🗑 Eliminar" textFill="#f5f5f5">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor></Button>
+                <TableView fx:id="tableViewJugadores" layoutX="26.0" layoutY="248.0" prefHeight="134.0" prefWidth="546.0">
+                    <columns>
+                        <TableColumn fx:id="tableColumnNickname" prefWidth="147.0" text="Nickname" />
+                        <TableColumn fx:id="tableColumnVideojuego" prefWidth="124.0" text="Videojuego" />
+                        <TableColumn fx:id="tableColumnNivel" prefWidth="126.0" text="Nivel" />
+                        <TableColumn fx:id="tableColumnPuntos" prefWidth="148.0" text="Puntos" />
+                    </columns>
+                </TableView>
+                <TextField fx:id="textFieldNickname" layoutX="60.0" layoutY="65.0" promptText="Nombre del jugador" />
+                <TextField fx:id="textFieldNivel" layoutX="60.0" layoutY="118.0" promptText="Ej.: 45" />
+                <TextField fx:id="textFieldCantVicPartJug" disable="true" layoutX="60.0" layoutY="175.0" />
+                <ComboBox fx:id="comboBoxVideojuego" layoutX="286.0" layoutY="65.0" prefWidth="150.0">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor></ComboBox>
+                <ComboBox fx:id="comboBoxTipoJugador" layoutX="286.0" layoutY="118.0" prefWidth="150.0">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor></ComboBox>
+                <Label fx:id="labelMensaje" layoutX="62.0" layoutY="213.0" prefHeight="17.0" prefWidth="381.0" text="-" textFill="RED" />
+                <Button fx:id="buttonBuscar" layoutX="395.0" layoutY="175.0" mnemonicParsing="false" onAction="#buscarJugador" style="-fx-background-color: #3c678d;" text="⌕ Buscar" textFill="WHITE">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Button fx:id="buttonModificar" layoutX="473.0" layoutY="175.0" mnemonicParsing="false" onAction="#modificarJugador" style="-fx-background-color: #e1d313;" text="↺ Modificar">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+            </children>
+        </Pane>
+    </center>
+</BorderPane>
